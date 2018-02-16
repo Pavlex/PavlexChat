@@ -1,0 +1,32 @@
+.Registration{
+    margin-top:20%;
+    margin-right:15%;
+    margin-left: 15%;
+    background-color: #9624FF;
+    text-align: center;
+    overflow:hidden;
+    border-radius: 20px;
+ }
+.Registration h2{
+    font-size: 30px;
+    color:#FFFFFF;
+}
+
+.inpRegistration{
+    border-radius: 5px;
+    border:10px;
+    border-color: #9624FF;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.Registration label{
+    color:#FFFFFF;
+    font-size: 25px;
+}
+
+#btnRegistration{
+    margin-left: 20px;
+    font-size: 19px;
+    border-radius: 5px;
+}
