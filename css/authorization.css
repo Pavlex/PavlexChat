@@ -1,11 +1,11 @@
 .Registration{
-    margin-top:20%;
-    margin-right:15%;
-    margin-left: 15%;
+    margin-top: 15%;
     background-color: #9624FF;
     text-align: center;
     overflow:hidden;
     border-radius: 20px;
+    display: inline-block;
+    padding: 30px;
  }
 .Registration h2{
     font-size: 30px;
@@ -16,7 +16,7 @@
     border-radius: 5px;
     border:10px;
     border-color: #9624FF;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
@@ -26,7 +26,12 @@
 }
 
 #btnRegistration{
-    margin-left: 20px;
+    margin-bottom: 20px;
     font-size: 19px;
     border-radius: 5px;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+body{
+    text-align: center;
 }
