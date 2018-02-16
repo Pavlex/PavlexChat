@@ -1,4 +1,4 @@
 <?php
-    $db = mysql_connect("Jino.ru MySQL:3306","9046936062", "Pavlex");
-    mysql_select_db("9046936062_users", $db);
+      $db = mysql_connect("localhost","9046936062", "Pavlex","9046936062_users");
+      mysql_select_db ("9046936062_users",$db);
 ?>
