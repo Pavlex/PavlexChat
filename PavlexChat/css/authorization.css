@@ -1,0 +1,45 @@
+.Registration{
+    margin-top: 15%;
+    background-color: #9624FF;
+    text-align: center;
+    overflow:hidden;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 30px;
+ }
+.Registration h2{
+    font-size: 30px;
+    color:#FFFFFF;
+}
+
+.inpRegistration{
+    border-radius: 5px;
+    border:10px;
+    border-color: #9624FF;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.Registration label{
+    color:#FFFFFF;
+    font-size: 25px;
+}
+
+#btnRegistration{
+    margin-bottom: 20px;
+    font-size: 19px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+body{
+    text-align: center;
+}
+
+#btnLogin{
+    margin-bottom: 20px;
+    font-size: 19px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}

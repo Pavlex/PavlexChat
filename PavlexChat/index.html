@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="PavlexChat" content="Chat">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/authorization.css">
+    <title>PavlexChat</title>
+</head> 
+<body>
+    <form class="Registration">
+        <h2>Регистрация</h2>
+        <div>
+        <label for="login">Логин: &nbsp;</label>
+        <input type="text" class="inpRegistration" name="login" placeholder="Введите логин">
+        </div>
+        <div>
+        <label for="password">Пароль: </label>
+        <input type="password" class="inpRegistration" name="password" placeholder="Введите пароль">
+        </div>
+        <input formaction="reg.php" formmethod="post" type="submit" value="Регистрация" id="btnRegistration">
+        <input  formaction="login.php" formmethod="post" type="submit" value="Вход" id="btnLogin">
+    </form>
+</body>
+</html>
