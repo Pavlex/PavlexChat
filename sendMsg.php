@@ -10,5 +10,5 @@
   echo "INSERT INTO message (message_text, id_user) VALUES('$msg', ".$row1['id_user'].")"."<br>";
   $result=mysql_query("INSERT INTO message (message_text, id_user) VALUES('$msg', ".$row1['id_user'].")");
   mysql_close($db);
-  header('Location: output.php'); exit;
+  header('Location: output.php');
 ?>

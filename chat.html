@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+    <title>Chat</title>
+    <script>
+            function getXmlHttp(){
+                var xmlhttp;
+                try{
+                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch(e){
+                        try{
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        catch(E){
+                            xmlhttp = false;
+                        }
+                }
+                if(!xmlhttp && typeof XMLHttpRequest !='undefined'){
+                    xmlhttp = new XMLHttpRequest();
+                }
+                return xmlhttp;
+            }
+            function Input(){
+                var xmlhttp = getXmlHttp();
+                xmlhttp.open("POST", "output.php", true);
+                xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xmlhttp.send("update");
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState == 4){
+                        if(xmlhttp.status == 200){
+                            var response = xmlhttp.responseText;
+                            alert(response);
+                        }
+                    }
+                }
+            }
+        </script>
 </head>
-<body >
+<body onload="Input()">
 	<form action="output.php"></form><div style="padding-left: 20%; padding-right: 20%">
 	<div style="display: block; background-color: lightgray; text-align: center;">
 				<?php foreach ($str as $str1) { ?>
@@ -12,7 +46,7 @@
                 <?php } ?>
 	<form action="sendMsg.php" method="post">
         <div style="display: flex;"">
-        <input type="hidden" name="login" value="<?php echo $_SESSION['login']?>">
+        <input type="hidden" name="login" value="1">
         <input style="width:85%" type="text" name="msg" placeholder="Введите сообщение">
         <input style="width:15%" type="submit" value="Отправить" id="btnSendMsg">
         </div>

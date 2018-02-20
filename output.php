@@ -1,11 +1,14 @@
-<?
-		include("bd.php");
-		
-		$result=mysql_query('SELECT * FROM `message`'); // запрос на выборку
-		while($row=mysql_fetch_array($result))
-		{
-			$row1 = mysql_fetch_array(mysql_query('SELECT login FROM `users` where id_user='.$row['id_user']));
-			$str[] = $row1['login'].'. '.$row['message_text'];// выводим данные
+<?php
+	if(isset($_POST["update"])){
+		$db = mysql_connect("localhost","9046936062", "Pavlex","9046936062_users");
+		mysql_select_db ("9046936062_users",$db);
+		$query = mysql_query("SELECT 'users.login', 'message.message_text' FROM  `message` ,  `users` WHERE 'users.id_user' = 'message.id_user' ORDER BY time_message");
+		$row = mysql_fetch_array($query);
+		$result = array();
+		for($i = 0; i<count($row);$i++){
+			$result[$i]["name"] = $row['login'];
+			$result[$i]["message"] = $row['message_text'];
 		}
-		require_once('chat.html');
+		echo json_encode($result);
+	}
 ?>
