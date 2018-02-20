@@ -1,0 +1,7 @@
+#chat{
+    width: 400px;
+    text-align: left;
+    height: 600px;
+    overflow-x: none;
+    overflow-y: auto;
+}
