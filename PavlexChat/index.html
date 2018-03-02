@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="css/authorization.css">
     <title>PavlexChat</title>
 </head> 
-<body>
+<body onload="Input()">
     <form class="Registration">
         <h2>Регистрация</h2>
         <div>
         <label for="login">Логин: &nbsp;</label>
-        <input type="text" class="inpRegistration" name="login" placeholder="Введите логин">
+        <input type="text" class="inpRegistration" name="login" placeholder="Введите логин" id="login">
         </div>
         <div>
         <label for="password">Пароль: </label>
-        <input type="password" class="inpRegistration" name="password" placeholder="Введите пароль">
+        <input type="password" class="inpRegistration" name="password" placeholder="Введите пароль" id = "password">
         </div>
         <input formaction="reg.php" formmethod="post" type="submit" value="Регистрация" id="btnRegistration">
-        <input  formaction="login.php" formmethod="post" type="submit" value="Вход" id="btnLogin">
+        <input  formaction="reg.php" formmethod="post" type="submit" value="Вход" id="btnLogin">
     </form>
+
 </body>
 </html>
